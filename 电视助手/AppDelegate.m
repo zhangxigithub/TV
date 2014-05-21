@@ -16,7 +16,16 @@
     
     adb = [[ADB alloc] init];
     
-    [adb connect:@" 192.168.65.223"];
+    //[adb connect:@" 192.168.65.223"];
+    [adb scanWithResult:^(NSArray *result) {
+        NSLog(@"%@",result);
+    }];
+    //[adb scan:24];
+//    [adb scan:5554
+    //NSArray *addresses = [[NSHost currentHost] addresses];
+    //NSLog(@"%@",[[NSHost currentHost] address]);
+    //[adb scan];
+    //[adb connect:@"10.0.1.4"];
     
     //self.result.stringValue = [NSString stringWithFormat:@"command path :\n%@\n\n",path];
     

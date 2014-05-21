@@ -7,13 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GCDAsyncSocket.h"
 
-@interface ADB : NSObject
+
+
+
+@interface ADB : NSObject<GCDAsyncSocketDelegate>
 {
     NSString *adb;
+    GCDAsyncSocket *socket;
+    NSMutableArray *sockets;
+    NSMutableArray *ips;
+    void (^scanResult)(NSArray *result);
 }
 
--(NSArray *)scan;
+-(NSArray *)scanWithResult:(void(^)(NSArray *result))result;
 -(NSArray *)scan:(int)port;
 
 -(BOOL)connect:(NSString *)address;

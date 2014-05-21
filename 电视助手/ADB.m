@@ -16,22 +16,66 @@
     self = [super init];
     if (self) {
         adb = [[NSBundle mainBundle] pathForResource:@"adb" ofType:@""];
+        sockets = [NSMutableArray array];
+        ips     = [NSMutableArray array];
     }
     return self;
 }
-
-
--(NSArray *)scan
+- (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port
 {
-    return [self scan:-1];
+    NSLog(@"Found open port %d on %@", port, host);
+    [ips addObject:host];
+    //[sock setDelegate:nil];
+    [sock disconnect];
+    //[sock setDelegate:self];
+    
+    
+    if([[[host componentsSeparatedByString:@"."] objectAtIndex:3] isEqualToString:@"30"])
+    {
+        scanResult(ips);
+    }
+
+}
+
+- (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
+{
+    
+    if([[[sock.connectedHost componentsSeparatedByString:@"."] objectAtIndex:3] isEqualToString:@"30"])
+    {
+        scanResult(ips);
+    }
+    NSLog(@"Disconnected  \n\n  %@\n %d\n  %@\n %d\n",sock.connectedHost,sock.connectedPort,sock.localHost,sock.localPort);
+}
+
+-(NSArray *)scanWithResult:(void(^)(NSArray *result))result;
+{
+    scanResult = result;
+    return [self scan:5555];
 }
 
 -(NSArray *)scan:(int)port;
 {
-    if(port<0)
+    if(port >0)
     {
-    }else if(port >0)
-    {
+        NSString *ip  = [[NSHost currentHost] addresses][1];
+        NSArray  *ipArray = [ip componentsSeparatedByString:@"."];
+        
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0);
+    
+        for(int i =0;i<=30;i++)
+        {
+            GCDAsyncSocket *s = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:queue];
+            
+            [sockets addObject:s];
+            NSError *error = nil;
+            
+            
+            NSString *theIP = [NSString stringWithFormat:@"%@.%@.%@.%d",ipArray[0],ipArray[1],ipArray[2],i];
+            //NSLog(@"%@",theIP);
+            [s connectToHost:theIP onPort:port withTimeout:1 error:&error];
+                
+        }
+        
     }
     return @[];
 }
