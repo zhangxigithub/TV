@@ -11,7 +11,7 @@
 @implementation ADB
 
 
-- (instancetype)init
+- (id)init
 {
     self = [super init];
     if (self) {
@@ -21,7 +21,20 @@
 }
 
 
+-(NSArray *)scan
+{
+    return [self scan:-1];
+}
 
+-(NSArray *)scan:(int)port;
+{
+    if(port<0)
+    {
+    }else if(port >0)
+    {
+    }
+    return @[];
+}
 
 
 -(BOOL)connect:(NSString *)address
@@ -33,14 +46,29 @@
     if(port<0)
     {
         NSString *result = [self runShell:adb arguments:@[@"connect",address]];
-        
+        NSLog(@"%@",result);
         
     }else if(port >0)
     {
     }
     return NO;
 }
-
+-(BOOL)disconnect:(NSString *)address
+{
+    return [self disconnect:address port:-1];
+}
+-(BOOL)disconnect:(NSString *)address port:(int)port
+{
+    if(port<0)
+    {
+        NSString *result = [self runShell:adb arguments:@[@"disconnect",address]];
+        NSLog(@"%@",result);
+        
+    }else if(port >0)
+    {
+    }
+    return NO;
+}
 -(NSArray *)devices
 {
     return @[];

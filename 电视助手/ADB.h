@@ -13,8 +13,14 @@
     NSString *adb;
 }
 
+-(NSArray *)scan;
+-(NSArray *)scan:(int)port;
+
 -(BOOL)connect:(NSString *)address;
 -(BOOL)connect:(NSString *)address port:(int)port;
+
+-(BOOL)disconnect:(NSString *)address;
+-(BOOL)disconnect:(NSString *)address port:(int)port;
 
 -(NSArray *)devices;
 
