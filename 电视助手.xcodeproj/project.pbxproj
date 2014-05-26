@@ -24,6 +24,8 @@
 		33A50DCC192C4CE900B34646 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A50CEC192C4CE800B34646 /* GCDAsyncSocket.m */; };
 		33A50DCD192C4CE900B34646 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A50CEE192C4CE800B34646 /* GCDAsyncUdpSocket.m */; };
 		33A50E4B192C4CF800B34646 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A50E4A192C4CF800B34646 /* CFNetwork.framework */; };
+		33C0E404193379E1001D66D6 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E401193379E1001D66D6 /* AsyncSocket.m */; };
+		33C0E405193379E1001D66D6 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E403193379E1001D66D6 /* AsyncUdpSocket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		33A50CED192C4CE800B34646 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		33A50CEE192C4CE800B34646 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		33A50E4A192C4CF800B34646 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		33C0E400193379E1001D66D6 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		33C0E401193379E1001D66D6 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		33C0E402193379E1001D66D6 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		33C0E403193379E1001D66D6 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +184,10 @@
 		33A50CE9192C4CE800B34646 /* GCD */ = {
 			isa = PBXGroup;
 			children = (
+				33C0E400193379E1001D66D6 /* AsyncSocket.h */,
+				33C0E401193379E1001D66D6 /* AsyncSocket.m */,
+				33C0E402193379E1001D66D6 /* AsyncUdpSocket.h */,
+				33C0E403193379E1001D66D6 /* AsyncUdpSocket.m */,
 				33A50CEA192C4CE800B34646 /* Documentation.html */,
 				33A50CEB192C4CE800B34646 /* GCDAsyncSocket.h */,
 				33A50CEC192C4CE800B34646 /* GCDAsyncSocket.m */,
@@ -291,8 +301,10 @@
 				33A50DCD192C4CE900B34646 /* GCDAsyncUdpSocket.m in Sources */,
 				33A50DCC192C4CE900B34646 /* GCDAsyncSocket.m in Sources */,
 				337AAFF3192C98AA004630D7 /* ADB.m in Sources */,
+				33C0E404193379E1001D66D6 /* AsyncSocket.m in Sources */,
 				33A50CC7192C3E8200B34646 /* AppDelegate.m in Sources */,
 				33A50CC0192C3E8200B34646 /* main.m in Sources */,
+				33C0E405193379E1001D66D6 /* AsyncUdpSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

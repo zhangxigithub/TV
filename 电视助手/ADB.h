@@ -10,7 +10,11 @@
 #import "GCDAsyncSocket.h"
 
 
+@protocol ADBDelegate <NSObject>
 
+-(void)findSocket:(GCDAsyncSocket *)socket;
+
+@end
 
 @interface ADB : NSObject<GCDAsyncSocketDelegate>
 {
@@ -18,11 +22,13 @@
     GCDAsyncSocket *socket;
     NSMutableArray *sockets;
     NSMutableArray *ips;
-    void (^scanResult)(NSArray *result);
+    BOOL isScanning;
 }
+@property(nonatomic,weak) id<ADBDelegate> delegate;
 
--(NSArray *)scanWithResult:(void(^)(NSArray *result))result;
+-(NSArray *)scan;
 -(NSArray *)scan:(int)port;
+-(void)stopScan;
 
 -(BOOL)connect:(NSString *)address;
 -(BOOL)connect:(NSString *)address port:(int)port;
@@ -32,5 +38,5 @@
 
 -(NSArray *)devices;
 
-
+-(BOOL)install:(NSString *)path;
 @end

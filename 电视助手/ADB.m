@@ -15,6 +15,7 @@
 {
     self = [super init];
     if (self) {
+        isScanning = NO;
         adb = [[NSBundle mainBundle] pathForResource:@"adb" ofType:@""];
         sockets = [NSMutableArray array];
         ips     = [NSMutableArray array];
@@ -23,38 +24,36 @@
 }
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port
 {
-    NSLog(@"Found open port %d on %@", port, host);
+    //NSLog(@"Found open port %d on %@", port, host);
     [ips addObject:host];
+    
+    [self.delegate findSocket:sock];
     //[sock setDelegate:nil];
     [sock disconnect];
     //[sock setDelegate:self];
     
-    
-    if([[[host componentsSeparatedByString:@"."] objectAtIndex:3] isEqualToString:@"30"])
-    {
-        scanResult(ips);
-    }
+
 
 }
 
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
 {
-    
-    if([[[sock.connectedHost componentsSeparatedByString:@"."] objectAtIndex:3] isEqualToString:@"30"])
-    {
-        scanResult(ips);
-    }
-    NSLog(@"Disconnected  \n\n  %@\n %d\n  %@\n %d\n",sock.connectedHost,sock.connectedPort,sock.localHost,sock.localPort);
+    [sockets removeObject:sock];
 }
 
--(NSArray *)scanWithResult:(void(^)(NSArray *result))result;
+-(void)stopScan
 {
-    scanResult = result;
+    isScanning = NO;
+    [sockets makeObjectsPerformSelector:@selector(disconnect)];
+}
+-(NSArray *)scan;
+{
     return [self scan:5555];
 }
 
 -(NSArray *)scan:(int)port;
 {
+    isScanning = YES;
     if(port >0)
     {
         NSString *ip  = [[NSHost currentHost] addresses][1];
@@ -90,8 +89,19 @@
     if(port<0)
     {
         NSString *result = [self runShell:adb arguments:@[@"connect",address]];
+
         NSLog(@"%@",result);
+        NSRange fail = [result rangeOfString:@"unable to connect"];
+        NSRange success = [result rangeOfString:@"connected to"];
         
+        if (fail.location != NSNotFound) {
+            return NO;
+        }
+        if (success.location != NSNotFound) {
+            return YES;
+        }
+        
+        NSLog(@"%@",result);
     }else if(port >0)
     {
     }
@@ -115,9 +125,17 @@
 }
 -(NSArray *)devices
 {
+    NSString *result = [self runShell:adb arguments:@[@"devices"]];
+    NSLog(@"%@",result);
     return @[];
 }
 
+-(BOOL)install:(NSString *)path
+{
+    NSString *result = [self runShell:adb arguments:@[@"install",path]];
+    NSLog(@"%@",result);
+    return YES;
+}
 
 
 

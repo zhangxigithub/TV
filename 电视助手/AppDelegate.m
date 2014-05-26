@@ -15,11 +15,9 @@
 {
     
     adb = [[ADB alloc] init];
-    
+    adb.delegate = self;
     //[adb connect:@" 192.168.65.223"];
-    [adb scanWithResult:^(NSArray *result) {
-        NSLog(@"%@",result);
-    }];
+    //[adb scan];
     //[adb scan:24];
 //    [adb scan:5554
     //NSArray *addresses = [[NSHost currentHost] addresses];
@@ -41,9 +39,22 @@
     //[self startScan];
 }
 
+-(void)findSocket:(GCDAsyncSocket *)socket
+{
+    NSLog(@"find socket : %@",socket);
+    [self log:[NSString stringWithFormat:@"连接设备 : %@",socket.connectedHost]];
+    
+    BOOL connect = [adb connect:socket.connectedHost];
+    
+    [adb stopScan];
+    [self log:[NSString stringWithFormat:@"%@",connect?@"连接成功":@"连接失败"]];
+}
 
-
-
+-(void)log:(NSString *)result
+{
+    self.result.stringValue = [self.result.stringValue stringByAppendingString:result];
+    self.result.stringValue = [self.result.stringValue stringByAppendingString:@"\n"];
+}
 //
 //
 //
@@ -92,4 +103,16 @@
 
 
 
+- (IBAction)scan:(id)sender {
+    [self log:@"开始扫描..."];
+    [adb performSelectorInBackground:@selector(scan) withObject:nil];
+}
+
+- (IBAction)list:(id)sender {
+    [adb devices];
+}
+
+- (IBAction)test:(id)sender {
+    [adb install:@"/Users/zhangxi/Downloads/com.ting.mp3.qianqian.android_170944.apk"];
+}
 @end
