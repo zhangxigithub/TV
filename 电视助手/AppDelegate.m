@@ -16,6 +16,7 @@
     
     adb = [[ADB alloc] init];
     adb.delegate = self;
+    self.fileView.delegate = self;
     //[adb connect:@" 192.168.65.223"];
     //[adb scan];
     //[adb scan:24];
@@ -98,7 +99,15 @@
 
 
 
-
+-(void)dragDropViewFileList:(NSArray *)fileList{
+    //如果数组不存在或为空直接返回不做处理（这种方法应该被广泛的使用，在进行数据处理前应该现判断是否为空。）
+    if(!fileList || [fileList count] <= 0)return;
+    //在这里我们将遍历这个数字，输出所有的链接，在后台你将会看到所有接受到的文件地址
+    for (int n = 0 ; n < [fileList count] ; n++) {
+        NSLog(@">>> %@",[fileList objectAtIndex:n]);
+    }
+    
+}
 
 
 

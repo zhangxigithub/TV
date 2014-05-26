@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "GCDAsyncSocket.h"
 #import "ADB.h"
+#import "DragDropView.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate,GCDAsyncSocketDelegate,ADBDelegate>
 {
@@ -20,6 +21,7 @@
 }
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTextField *result;
+@property (weak) IBOutlet DragDropView *fileView;
 
 - (IBAction)scan:(id)sender;
 - (IBAction)list:(id)sender;

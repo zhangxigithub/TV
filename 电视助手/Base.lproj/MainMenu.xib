@@ -13,6 +13,7 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="fileView" destination="cbk-yx-Dkz" id="NIg-eU-ABA"/>
                 <outlet property="result" destination="cYG-k9-FVF" id="cvW-B8-Tdz"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -677,7 +678,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYG-k9-FVF">
-                        <rect key="frame" x="20" y="108" width="440" height="133"/>
+                        <rect key="frame" x="20" y="20" width="440" height="133"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="c77-Sz-UBU">
                             <font key="font" metaFont="system"/>
@@ -718,6 +719,13 @@
                             <action selector="test:" target="Voe-Tx-rLC" id="b9b-G3-JOJ"/>
                         </connections>
                     </button>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cbk-yx-Dkz" customClass="DragDropView">
+                        <rect key="frame" x="20" y="166" width="440" height="96"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="MAu-U4-RM5"/>
+                        </connections>
+                    </customView>
                 </subviews>
             </view>
         </window>
