@@ -6,4 +6,6 @@
 
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
+    #define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+    #define MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
 #endif

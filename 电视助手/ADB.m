@@ -196,6 +196,18 @@
 {
     NSString *result = [self runShell:adb arguments:@[@"install",path]];
     NSLog(@"%@",result);
+    
+    
+    MAIN(^{
+        
+        NSRange sucess = [result rangeOfString:@"Success"];
+        
+        
+        [self.delegate finishInstall:(sucess.location != NSNotFound) info:result];
+    });
+    
+    
+    
     return YES;
 }
 

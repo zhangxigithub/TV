@@ -11,7 +11,7 @@
 #import "ADB.h"
 #import "DragDropView.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate,GCDAsyncSocketDelegate,ADBDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate,GCDAsyncSocketDelegate,ADBDelegate,DragDropViewDelegate>
 {
     GCDAsyncSocket *asyncSocket;
     NSMutableArray *availableHosts;

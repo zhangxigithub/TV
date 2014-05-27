@@ -14,6 +14,10 @@
 
 -(void)findSocket:(GCDAsyncSocket *)socket;
 -(void)finish;
+-(void)finishInstall:(BOOL)sucess info:(NSString *)info;
+
+
+
 
 @end
 
