@@ -50,6 +50,10 @@
     [adb stopScan];
     [self log:[NSString stringWithFormat:@"%@",connect?@"连接成功":@"连接失败"]];
 }
+-(void)finish
+{
+    [self log:@"查找完成"];
+}
 
 -(void)log:(NSString *)result
 {

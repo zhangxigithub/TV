@@ -13,15 +13,16 @@
 @protocol ADBDelegate <NSObject>
 
 -(void)findSocket:(GCDAsyncSocket *)socket;
+-(void)finish;
 
 @end
 
 @interface ADB : NSObject<GCDAsyncSocketDelegate>
 {
     NSString *adb;
-    GCDAsyncSocket *socket;
+
     NSMutableArray *sockets;
-    NSMutableArray *ips;
+    
     BOOL isScanning;
 }
 @property(nonatomic,weak) id<ADBDelegate> delegate;
