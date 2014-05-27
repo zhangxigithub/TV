@@ -27,6 +27,7 @@
 		33C0E404193379E1001D66D6 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E401193379E1001D66D6 /* AsyncSocket.m */; };
 		33C0E405193379E1001D66D6 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E403193379E1001D66D6 /* AsyncUdpSocket.m */; };
 		33C0E408193389E0001D66D6 /* DragDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E407193389E0001D66D6 /* DragDropView.m */; };
+		33C0E40A1934C013001D66D6 /* drag.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C0E4091934C013001D66D6 /* drag.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		33C0E403193379E1001D66D6 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
 		33C0E406193389E0001D66D6 /* DragDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropView.h; sourceTree = "<group>"; };
 		33C0E407193389E0001D66D6 /* DragDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropView.m; sourceTree = "<group>"; };
+		33C0E4091934C013001D66D6 /* drag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drag.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		33A50CB9192C3E8100B34646 /* 电视助手 */ = {
 			isa = PBXGroup;
 			children = (
+				33C0E4091934C013001D66D6 /* drag.png */,
 				33A50CE7192C3F1200B34646 /* adb */,
 				33A50CE9192C4CE800B34646 /* GCD */,
 				33A50CC5192C3E8200B34646 /* AppDelegate.h */,
@@ -281,6 +284,7 @@
 			files = (
 				33A50CE8192C3F1200B34646 /* adb in Resources */,
 				33A50DCB192C4CE900B34646 /* Documentation.html in Resources */,
+				33C0E40A1934C013001D66D6 /* drag.png in Resources */,
 				33A50CBE192C3E8200B34646 /* InfoPlist.strings in Resources */,
 				33A50CCC192C3E8200B34646 /* Images.xcassets in Resources */,
 				33A50CC4192C3E8200B34646 /* Credits.rtf in Resources */,
