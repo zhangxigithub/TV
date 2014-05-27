@@ -57,7 +57,7 @@
 
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
 {
-    NSLog(@"%@",@"socketDidDisconnect");
+    NSLog(@"%@ %@",@"socketDidDisconnect",sock.connectedHost);
     [sockets removeObject:sock];
     
     if(sockets.count == 0)
@@ -101,6 +101,14 @@
             [s connectToHost:theIP onPort:port withTimeout:1 error:&error];
                 
         }
+
+            GCDAsyncSocket *s = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:queue];
+            
+            [sockets addObject:s];
+            NSError *error = nil;
+            
+            [s connectToHost:@"192.168.67.47" onPort:port withTimeout:1 error:&error];
+        
         
     }
     return @[];
