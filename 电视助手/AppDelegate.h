@@ -18,6 +18,7 @@
     NSMutableArray *sockets;
     
     ADB *adb;
+    NSAlert* alert;
 }
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTextField *result;

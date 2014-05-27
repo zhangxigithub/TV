@@ -68,10 +68,16 @@
 -(void)alert:(NSString *)message
 {
 
-    NSAlert* alert = [NSAlert alertWithMessageText:message defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"" ];
+    //[[alert window] close];
     
+    alert = [NSAlert alertWithMessageText:message defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"" ];
 
-    [alert beginSheetModalForWindow:[self window] modalDelegate:nil didEndSelector:nil contextInfo:nil];
+
+    [alert beginSheetModalForWindow:[self window]
+                      modalDelegate:nil
+                     didEndSelector:nil
+                        contextInfo:nil];
+    
 
 }
 -(void)log:(NSString *)result
