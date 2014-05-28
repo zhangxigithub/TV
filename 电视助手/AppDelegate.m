@@ -36,17 +36,11 @@
 {
     [self log:@"查找完成"];
 }
+
 -(void)finishInstall:(BOOL)sucess info:(NSString *)info
 {
     [self alert:info];
 }
-
-
-
-
-
-
-
 
 
 
