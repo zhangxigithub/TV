@@ -17,7 +17,8 @@
     adb = [[ADB alloc] init];
     adb.delegate = self;
     self.fileView.delegate = self;
-
+    
+    self.loadingView.alphaValue = 0;
 }
 
 //adb delegate

@@ -28,5 +28,7 @@
 - (IBAction)list:(id)sender;
 - (IBAction)test:(id)sender;
 
+@property (weak) IBOutlet NSTextField *statusLabel;
+@property (weak) IBOutlet NSImageView *loadingView;
 
 @end
