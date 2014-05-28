@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5053"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -14,7 +14,6 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
                 <outlet property="fileView" destination="cbk-yx-Dkz" id="NIg-eU-ABA"/>
-                <outlet property="result" destination="cYG-k9-FVF" id="cvW-B8-Tdz"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -672,20 +671,11 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYG-k9-FVF">
-                        <rect key="frame" x="20" y="20" width="440" height="133"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="c77-Sz-UBU">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BrR-fm-fBB">
                         <rect key="frame" x="14" y="276" width="92" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -719,8 +709,13 @@
                             <action selector="test:" target="Voe-Tx-rLC" id="b9b-G3-JOJ"/>
                         </connections>
                     </button>
+                    <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eA-oP-6ok">
+                        <rect key="frame" x="123" y="10" width="235" height="235"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" image="drag" id="a4M-na-3lN"/>
+                    </imageView>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cbk-yx-Dkz" customClass="DragDropView">
-                        <rect key="frame" x="20" y="166" width="440" height="96"/>
+                        <rect key="frame" x="122" y="3" width="238" height="248"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <connections>
                             <outlet property="delegate" destination="-2" id="MAu-U4-RM5"/>
@@ -730,4 +725,7 @@
             </view>
         </window>
     </objects>
+    <resources>
+        <image name="drag" width="72" height="72"/>
+    </resources>
 </document>
