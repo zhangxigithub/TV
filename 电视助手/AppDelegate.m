@@ -93,22 +93,19 @@
 
 - (IBAction)test:(id)sender {
     
-
-    [self.loadingView setWantsLayer:YES];
-    CATransform3D rotationTransform = CATransform3DMakeRotation(M_PI, 0, 0, 1);
-
-    CABasicAnimation *rotation = [CABasicAnimation animationWithKeyPath:@"transform" ];
+    CABasicAnimation *rotation = [CABasicAnimation animationWithKeyPath:@"frameRotation" ];
     rotation.fromValue = [NSNumber numberWithFloat:0.0f];
-    rotation.toValue = [NSValue valueWithCATransform3D:rotationTransform];
+    rotation.toValue = [NSNumber numberWithFloat:360];
     rotation.repeatCount = 10;
     rotation.duration = 1;
     
-   
-    //self.loadingView.layer.anchorPoint = CGPointMake(0.5f,0.5f);
-    //[[self.loadingView animator] setAnimations:@{@"frameRotation":rotation}];
-    //[[self.loadingView animator] setFrameRotation:360];
-     [self.loadingView.layer addAnimation:rotation forKey:@"transform"];
+    //[self.loadingView setWantsLayer:YES];
+    //self.loadingView.layer.anchorPoint = CGPointMake(0.5, 0.5);
     
+    
+    [[self.loadingView animator] setAnimations:@{@"frameRotation":rotation}];
+     [[self.loadingView animator] setFrameRotation:360];
+    //self.loadingView.layer.anchorPoint = CGPointMake(1,1);
 
 }
 @end
