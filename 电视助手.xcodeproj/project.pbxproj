@@ -30,6 +30,7 @@
 		33C0E40A1934C013001D66D6 /* drag.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C0E4091934C013001D66D6 /* drag.png */; };
 		33F678BF1935CD2200AA2091 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 33F678BD1935CD2200AA2091 /* circle.png */; };
 		33F678C01935CD2200AA2091 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 33F678BE1935CD2200AA2091 /* bg.png */; };
+		33F678C219372C6500AA2091 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F678C119372C6500AA2091 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		33C0E4091934C013001D66D6 /* drag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drag.png; sourceTree = "<group>"; };
 		33F678BD1935CD2200AA2091 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		33F678BE1935CD2200AA2091 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		33F678C119372C6500AA2091 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F678C219372C6500AA2091 /* QuartzCore.framework in Frameworks */,
 				33A50E4B192C4CF800B34646 /* CFNetwork.framework in Frameworks */,
 				33A50CB4192C3E8100B34646 /* Cocoa.framework in Frameworks */,
 			);
@@ -126,6 +129,7 @@
 		33A50CB2192C3E8100B34646 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33F678C119372C6500AA2091 /* QuartzCore.framework */,
 				33A50E4A192C4CF800B34646 /* CFNetwork.framework */,
 				33A50CB3192C3E8100B34646 /* Cocoa.framework */,
 				33A50CD2192C3E8200B34646 /* XCTest.framework */,

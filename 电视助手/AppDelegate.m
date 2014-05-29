@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "GCDAsyncSocket.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation AppDelegate
 
@@ -18,7 +19,7 @@
     adb.delegate = self;
     self.fileView.delegate = self;
     
-    self.loadingView.alphaValue = 0;
+    self.loadingView.alphaValue = 1;
 }
 
 //adb delegate
@@ -91,6 +92,23 @@
 }
 
 - (IBAction)test:(id)sender {
-    [adb install:@"/Users/zhangxi/Downloads/com.ting.mp3.qianqian.android_170944.apk"];
+    
+
+    [self.loadingView setWantsLayer:YES];
+    CATransform3D rotationTransform = CATransform3DMakeRotation(M_PI, 0, 0, 1);
+
+    CABasicAnimation *rotation = [CABasicAnimation animationWithKeyPath:@"transform" ];
+    rotation.fromValue = [NSNumber numberWithFloat:0.0f];
+    rotation.toValue = [NSValue valueWithCATransform3D:rotationTransform];
+    rotation.repeatCount = 10;
+    rotation.duration = 1;
+    
+   
+    //self.loadingView.layer.anchorPoint = CGPointMake(0.5f,0.5f);
+    //[[self.loadingView animator] setAnimations:@{@"frameRotation":rotation}];
+    //[[self.loadingView animator] setFrameRotation:360];
+     [self.loadingView.layer addAnimation:rotation forKey:@"transform"];
+    
+
 }
 @end
