@@ -456,6 +456,7 @@
 				3330F883193867100071E149 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3330F884193867100071E149 /* Build configuration list for PBXNativeTarget "TV-iPhoneTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +465,7 @@
 				3330F886193867100071E149 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

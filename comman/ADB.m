@@ -36,7 +36,7 @@
     if (self) {
         isScanning = NO;
         adb = [[NSBundle mainBundle] pathForResource:@"adb" ofType:@""];
-        sockets = [NSMutableArray array];
+        self.sockets = [NSMutableArray array];
 
     }
     return self;
@@ -59,9 +59,9 @@
 {
     NSLog(@"%@ %@",@"socketDidDisconnect",sock.connectedHost);
     [sock disconnect];
-    [sockets removeObject:sock];
+    [self.sockets removeObject:sock];
     
-    if(sockets.count == 0)
+    if(self.sockets.count == 0)
     {
         [self.delegate finish];
     }
@@ -70,7 +70,7 @@
 -(void)stopScan
 {
     isScanning = NO;
-    [sockets makeObjectsPerformSelector:@selector(disconnect)];
+    [self.sockets makeObjectsPerformSelector:@selector(disconnect)];
 }
 -(NSArray *)scan;
 {
@@ -93,7 +93,7 @@
         {
             GCDAsyncSocket *s = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:queue];
             
-            [sockets addObject:s];
+            [self.sockets addObject:s];
             NSError *error = nil;
             
             
@@ -105,7 +105,7 @@
 
             GCDAsyncSocket *s = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:queue];
             
-            [sockets addObject:s];
+            [self.sockets addObject:s];
             NSError *error = nil;
             
             [s connectToHost:@"192.168.67.47" onPort:port withTimeout:1 error:&error];
@@ -192,6 +192,31 @@
     NSLog(@"%@",result);
     return @[];
 }
+-(NSDictionary *)info
+{
+    NSString *infoPath = [NSHomeDirectory() stringByAppendingPathComponent:@"info.txt"];
+    NSLog(@"%@",infoPath);
+    
+    
+    [self runShell:adb arguments:@[@"pull",@"/system/build.prop",infoPath]];
+    
+    NSString *content = [[NSString alloc] initWithContentsOfFile:infoPath encoding:NSUTF8StringEncoding error:nil];
+
+    
+    //NSRange nameRange = [content rangeOfString:@"ro.product.name="];
+    //NSString *name =
+    NSMutableDictionary *infoDictionary = [NSMutableDictionary dictionary];
+    for (NSString *item in [content componentsSeparatedByString:@"\n"])
+    {
+        NSArray *keyValue = [item componentsSeparatedByString:@"="];
+        if(keyValue.count == 2)
+        {
+            [infoDictionary setObject:keyValue[1] forKey:keyValue[0]];
+        }
+    }
+
+    return infoDictionary;
+}
 
 -(BOOL)install:(NSString *)path
 {
@@ -267,4 +292,13 @@
     return string;
 }
 
+
++(BOOL)contain:(NSString *)string in:(NSString *)target
+{
+    NSRange range = [target rangeOfString:string];
+    if(range.location == NSNotFound)
+        return NO;
+    else
+        return YES;
+}
 @end

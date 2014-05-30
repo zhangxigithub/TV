@@ -14,11 +14,11 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate,GCDAsyncSocketDelegate,ADBDelegate,DragDropViewDelegate>
 {
-    NSMutableArray *sockets;
     ADB *adb;
     
     TV *tv;
 }
+
 @property (assign) IBOutlet NSWindow *window;
 
 

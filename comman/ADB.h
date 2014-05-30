@@ -25,10 +25,11 @@
 {
     NSString *adb;
 
-    NSMutableArray *sockets;
+    //NSMutableArray *sockets;
     
     BOOL isScanning;
 }
+@property(atomic,strong) NSMutableArray *sockets;
 @property(nonatomic,weak) id<ADBDelegate> delegate;
 
 -(NSArray *)scan;
@@ -42,6 +43,9 @@
 -(BOOL)disconnect:(NSString *)address port:(int)port;
 
 -(NSArray *)devices;
+-(NSDictionary *)info;
 
 -(BOOL)install:(NSString *)path;
+
++(BOOL)contain:(NSString *)string in:(NSString *)target;
 @end

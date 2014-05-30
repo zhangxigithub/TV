@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3330F84519382F890071E149 /* TV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3330F84419382F890071E149 /* TV.m */; };
-		337AAFF3192C98AA004630D7 /* ADB.m in Sources */ = {isa = PBXBuildFile; fileRef = 337AAFF2192C98AA004630D7 /* ADB.m */; };
 		33A50CB4192C3E8100B34646 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A50CB3192C3E8100B34646 /* Cocoa.framework */; };
 		33A50CBE192C3E8200B34646 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33A50CBC192C3E8200B34646 /* InfoPlist.strings */; };
 		33A50CC0192C3E8200B34646 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A50CBF192C3E8200B34646 /* main.m */; };
@@ -20,15 +18,17 @@
 		33A50CD4192C3E8200B34646 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A50CB3192C3E8100B34646 /* Cocoa.framework */; };
 		33A50CDC192C3E8200B34646 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33A50CDA192C3E8200B34646 /* InfoPlist.strings */; };
 		33A50CDE192C3E8200B34646 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A50CDD192C3E8200B34646 /* ____Tests.m */; };
-		33A50CE8192C3F1200B34646 /* adb in Resources */ = {isa = PBXBuildFile; fileRef = 33A50CE7192C3F1200B34646 /* adb */; };
-		33A50DCB192C4CE900B34646 /* Documentation.html in Resources */ = {isa = PBXBuildFile; fileRef = 33A50CEA192C4CE800B34646 /* Documentation.html */; };
-		33A50DCC192C4CE900B34646 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A50CEC192C4CE800B34646 /* GCDAsyncSocket.m */; };
-		33A50DCD192C4CE900B34646 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A50CEE192C4CE800B34646 /* GCDAsyncUdpSocket.m */; };
 		33A50E4B192C4CF800B34646 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A50E4A192C4CF800B34646 /* CFNetwork.framework */; };
-		33C0E404193379E1001D66D6 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E401193379E1001D66D6 /* AsyncSocket.m */; };
-		33C0E405193379E1001D66D6 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E403193379E1001D66D6 /* AsyncUdpSocket.m */; };
 		33C0E408193389E0001D66D6 /* DragDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E407193389E0001D66D6 /* DragDropView.m */; };
 		33C0E40A1934C013001D66D6 /* drag.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C0E4091934C013001D66D6 /* drag.png */; };
+		33C0E41B1938CF64001D66D6 /* adb in Resources */ = {isa = PBXBuildFile; fileRef = 33C0E40C1938CF64001D66D6 /* adb */; };
+		33C0E41C1938CF64001D66D6 /* ADB.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E40E1938CF64001D66D6 /* ADB.m */; };
+		33C0E41D1938CF64001D66D6 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E4111938CF64001D66D6 /* AsyncSocket.m */; };
+		33C0E41E1938CF64001D66D6 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E4131938CF64001D66D6 /* AsyncUdpSocket.m */; };
+		33C0E41F1938CF64001D66D6 /* Documentation.html in Resources */ = {isa = PBXBuildFile; fileRef = 33C0E4141938CF64001D66D6 /* Documentation.html */; };
+		33C0E4201938CF64001D66D6 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E4161938CF64001D66D6 /* GCDAsyncSocket.m */; };
+		33C0E4211938CF64001D66D6 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E4181938CF64001D66D6 /* GCDAsyncUdpSocket.m */; };
+		33C0E4221938CF64001D66D6 /* TV.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E41A1938CF64001D66D6 /* TV.m */; };
 		33F678BF1935CD2200AA2091 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 33F678BD1935CD2200AA2091 /* circle.png */; };
 		33F678C01935CD2200AA2091 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 33F678BE1935CD2200AA2091 /* bg.png */; };
 		33F678C219372C6500AA2091 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F678C119372C6500AA2091 /* QuartzCore.framework */; };
@@ -45,10 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3330F84319382F890071E149 /* TV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TV.h; sourceTree = "<group>"; };
-		3330F84419382F890071E149 /* TV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TV.m; sourceTree = "<group>"; };
-		337AAFF1192C98AA004630D7 /* ADB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADB.h; sourceTree = "<group>"; };
-		337AAFF2192C98AA004630D7 /* ADB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADB.m; sourceTree = "<group>"; };
 		33A50CB0192C3E8100B34646 /* 电视助手.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "电视助手.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A50CB3192C3E8100B34646 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		33A50CB6192C3E8100B34646 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -68,20 +64,24 @@
 		33A50CD9192C3E8200B34646 /* 电视助手Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "电视助手Tests-Info.plist"; sourceTree = "<group>"; };
 		33A50CDB192C3E8200B34646 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		33A50CDD192C3E8200B34646 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
-		33A50CE7192C3F1200B34646 /* adb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = adb; sourceTree = "<group>"; };
-		33A50CEA192C4CE800B34646 /* Documentation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Documentation.html; sourceTree = "<group>"; };
-		33A50CEB192C4CE800B34646 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
-		33A50CEC192C4CE800B34646 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
-		33A50CED192C4CE800B34646 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		33A50CEE192C4CE800B34646 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		33A50E4A192C4CF800B34646 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		33C0E400193379E1001D66D6 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
-		33C0E401193379E1001D66D6 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
-		33C0E402193379E1001D66D6 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
-		33C0E403193379E1001D66D6 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
 		33C0E406193389E0001D66D6 /* DragDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropView.h; sourceTree = "<group>"; };
 		33C0E407193389E0001D66D6 /* DragDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropView.m; sourceTree = "<group>"; };
 		33C0E4091934C013001D66D6 /* drag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drag.png; sourceTree = "<group>"; };
+		33C0E40C1938CF64001D66D6 /* adb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = adb; sourceTree = "<group>"; };
+		33C0E40D1938CF64001D66D6 /* ADB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADB.h; sourceTree = "<group>"; };
+		33C0E40E1938CF64001D66D6 /* ADB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADB.m; sourceTree = "<group>"; };
+		33C0E4101938CF64001D66D6 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		33C0E4111938CF64001D66D6 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		33C0E4121938CF64001D66D6 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		33C0E4131938CF64001D66D6 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		33C0E4141938CF64001D66D6 /* Documentation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Documentation.html; sourceTree = "<group>"; };
+		33C0E4151938CF64001D66D6 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		33C0E4161938CF64001D66D6 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		33C0E4171938CF64001D66D6 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		33C0E4181938CF64001D66D6 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		33C0E4191938CF64001D66D6 /* TV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TV.h; sourceTree = "<group>"; };
+		33C0E41A1938CF64001D66D6 /* TV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TV.m; sourceTree = "<group>"; };
 		33F678BD1935CD2200AA2091 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		33F678BE1935CD2200AA2091 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		33F678C119372C6500AA2091 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -154,20 +154,15 @@
 		33A50CB9192C3E8100B34646 /* 电视助手 */ = {
 			isa = PBXGroup;
 			children = (
+				33C0E40B1938CF64001D66D6 /* comman */,
 				33C0E4091934C013001D66D6 /* drag.png */,
 				33F678BD1935CD2200AA2091 /* circle.png */,
 				33F678BE1935CD2200AA2091 /* bg.png */,
-				33A50CE7192C3F1200B34646 /* adb */,
-				33A50CE9192C4CE800B34646 /* GCD */,
 				33A50CC5192C3E8200B34646 /* AppDelegate.h */,
 				33A50CC6192C3E8200B34646 /* AppDelegate.m */,
 				33C0E406193389E0001D66D6 /* DragDropView.h */,
 				33C0E407193389E0001D66D6 /* DragDropView.m */,
-				337AAFF1192C98AA004630D7 /* ADB.h */,
-				337AAFF2192C98AA004630D7 /* ADB.m */,
 				33A50CC8192C3E8200B34646 /* MainMenu.xib */,
-				3330F84319382F890071E149 /* TV.h */,
-				3330F84419382F890071E149 /* TV.m */,
 				33A50CCB192C3E8200B34646 /* Images.xcassets */,
 				33A50CBA192C3E8200B34646 /* Supporting Files */,
 			);
@@ -204,18 +199,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		33A50CE9192C4CE800B34646 /* GCD */ = {
+		33C0E40B1938CF64001D66D6 /* comman */ = {
 			isa = PBXGroup;
 			children = (
-				33C0E400193379E1001D66D6 /* AsyncSocket.h */,
-				33C0E401193379E1001D66D6 /* AsyncSocket.m */,
-				33C0E402193379E1001D66D6 /* AsyncUdpSocket.h */,
-				33C0E403193379E1001D66D6 /* AsyncUdpSocket.m */,
-				33A50CEA192C4CE800B34646 /* Documentation.html */,
-				33A50CEB192C4CE800B34646 /* GCDAsyncSocket.h */,
-				33A50CEC192C4CE800B34646 /* GCDAsyncSocket.m */,
-				33A50CED192C4CE800B34646 /* GCDAsyncUdpSocket.h */,
-				33A50CEE192C4CE800B34646 /* GCDAsyncUdpSocket.m */,
+				33C0E40C1938CF64001D66D6 /* adb */,
+				33C0E40D1938CF64001D66D6 /* ADB.h */,
+				33C0E40E1938CF64001D66D6 /* ADB.m */,
+				33C0E40F1938CF64001D66D6 /* GCD */,
+				33C0E4191938CF64001D66D6 /* TV.h */,
+				33C0E41A1938CF64001D66D6 /* TV.m */,
+			);
+			name = comman;
+			path = ../../comman;
+			sourceTree = "<group>";
+		};
+		33C0E40F1938CF64001D66D6 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				33C0E4101938CF64001D66D6 /* AsyncSocket.h */,
+				33C0E4111938CF64001D66D6 /* AsyncSocket.m */,
+				33C0E4121938CF64001D66D6 /* AsyncUdpSocket.h */,
+				33C0E4131938CF64001D66D6 /* AsyncUdpSocket.m */,
+				33C0E4141938CF64001D66D6 /* Documentation.html */,
+				33C0E4151938CF64001D66D6 /* GCDAsyncSocket.h */,
+				33C0E4161938CF64001D66D6 /* GCDAsyncSocket.m */,
+				33C0E4171938CF64001D66D6 /* GCDAsyncUdpSocket.h */,
+				33C0E4181938CF64001D66D6 /* GCDAsyncUdpSocket.m */,
 			);
 			path = GCD;
 			sourceTree = "<group>";
@@ -297,9 +306,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33A50CE8192C3F1200B34646 /* adb in Resources */,
-				33A50DCB192C4CE900B34646 /* Documentation.html in Resources */,
+				33C0E41B1938CF64001D66D6 /* adb in Resources */,
 				33F678C01935CD2200AA2091 /* bg.png in Resources */,
+				33C0E41F1938CF64001D66D6 /* Documentation.html in Resources */,
 				33C0E40A1934C013001D66D6 /* drag.png in Resources */,
 				33A50CBE192C3E8200B34646 /* InfoPlist.strings in Resources */,
 				33A50CCC192C3E8200B34646 /* Images.xcassets in Resources */,
@@ -324,15 +333,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33A50DCD192C4CE900B34646 /* GCDAsyncUdpSocket.m in Sources */,
-				33A50DCC192C4CE900B34646 /* GCDAsyncSocket.m in Sources */,
-				337AAFF3192C98AA004630D7 /* ADB.m in Sources */,
-				33C0E404193379E1001D66D6 /* AsyncSocket.m in Sources */,
+				33C0E4221938CF64001D66D6 /* TV.m in Sources */,
+				33C0E41E1938CF64001D66D6 /* AsyncUdpSocket.m in Sources */,
+				33C0E4211938CF64001D66D6 /* GCDAsyncUdpSocket.m in Sources */,
+				33C0E41D1938CF64001D66D6 /* AsyncSocket.m in Sources */,
 				33A50CC7192C3E8200B34646 /* AppDelegate.m in Sources */,
 				33A50CC0192C3E8200B34646 /* main.m in Sources */,
-				33C0E405193379E1001D66D6 /* AsyncUdpSocket.m in Sources */,
-				3330F84519382F890071E149 /* TV.m in Sources */,
 				33C0E408193389E0001D66D6 /* DragDropView.m in Sources */,
+				33C0E4201938CF64001D66D6 /* GCDAsyncSocket.m in Sources */,
+				33C0E41C1938CF64001D66D6 /* ADB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

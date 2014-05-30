@@ -16,8 +16,6 @@
 -(IBAction)showHelp:(id)sender
 {
     [self alert:@"help"];
-    
-    
 }
 -(BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
 {
@@ -35,7 +33,7 @@
     adb.delegate = self;
     self.fileView.delegate = self;
     
-//    self.loadingView.alphaValue = 0;
+
     [self stopAnimation];
     [self startScan];
 }
@@ -48,6 +46,8 @@
     tv = [[TV alloc] init];
     tv.host = socket.connectedHost;
     
+    
+    
     //[self log:[NSString stringWithFormat:@"连接设备 : %@",socket.connectedHost]];
     
     BOOL connect =  [adb connect:socket.connectedHost];
@@ -56,6 +56,12 @@
     
     [adb stopScan];
     [self alert:[NSString stringWithFormat:@"%@",connect?@"连接成功":@"连接失败"]];
+    if(connect)
+    {
+        NSDictionary *info = [adb info];
+        tv.name = info[@"ro.product.name"];
+        self.deviceLabel.stringValue = tv.name;
+    }
 }
 
 -(void)finish
@@ -70,7 +76,29 @@
 
 -(void)finishInstall:(BOOL)sucess info:(NSString *)info
 {
-    [self alert:info];
+    
+    //BOOL sucess = [ADB contain:@"Sucess" in:info];
+
+    
+    if(sucess)
+    {
+        [self alert:@"安装成功"];
+    }else
+    {
+        if([ADB contain:@"INSTALL_FAILED_ALREADY_EXISTS" in:info])
+        {
+            [self alert:@"应用已存在"];
+        }else if([ADB contain:@"waiting for device" in:info])
+        {
+            [adb connect:tv.host];
+        }else
+        {
+            [self alert:@"安装失败 >_<"];
+        }
+    }
+    
+    [self stopAnimation];
+    //[self alert:info];
 }
 
 
@@ -86,6 +114,7 @@
     if(path)
     {
         [self alert:@"安装中..."];
+        [self startAnimation];
         [adb performSelectorInBackground:@selector(install:) withObject:path];
     }
 }

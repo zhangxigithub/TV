@@ -12,5 +12,5 @@
 
 
 @property(nonatomic,strong) NSString *host;
-
+@property(nonatomic,strong) NSString *name;
 @end
