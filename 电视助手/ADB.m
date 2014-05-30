@@ -58,6 +58,7 @@
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
 {
     NSLog(@"%@ %@",@"socketDidDisconnect",sock.connectedHost);
+    [sock disconnect];
     [sockets removeObject:sock];
     
     if(sockets.count == 0)

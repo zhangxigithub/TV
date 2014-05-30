@@ -12,6 +12,11 @@
 
 @implementation AppDelegate
 
+
+-(IBAction)showHelp:(id)sender
+{
+    [self alert:@"help"];
+}
 -(BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
 {
     if(flag == NO)
@@ -123,6 +128,7 @@
     [self alert:@"上传成功"];
     [self stopAnimation];
 }
+
 
 -(void)startScan
 {

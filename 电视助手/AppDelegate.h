@@ -21,6 +21,8 @@
 }
 @property (assign) IBOutlet NSWindow *window;
 
+
+
 @property (weak) IBOutlet DragDropView *fileView;
 @property (weak) IBOutlet NSTextField *deviceLabel;
 @property (weak) IBOutlet NSTextField *statusLabel;
@@ -30,6 +32,7 @@
 
 - (IBAction)test:(id)sender;
 - (IBAction)stop:(id)sender;
+- (IBAction)showHelp:(id)sender;
 
 
 
