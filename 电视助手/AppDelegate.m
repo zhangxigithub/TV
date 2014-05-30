@@ -19,7 +19,7 @@
     adb.delegate = self;
     self.fileView.delegate = self;
     
-    self.loadingView.alphaValue = 1;
+    self.loadingView.alphaValue = 0;
 }
 
 //adb delegate
@@ -65,14 +65,15 @@
 {
 
     //[[alert window] close];
+    self.statusLabel.stringValue = message;
     
-    alert = [NSAlert alertWithMessageText:message defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"" ];
-
-
-    [alert beginSheetModalForWindow:[self window]
-                      modalDelegate:nil
-                     didEndSelector:nil
-                        contextInfo:nil];
+//    alert = [NSAlert alertWithMessageText:message defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"" ];
+//
+//
+//    [alert beginSheetModalForWindow:[self window]
+//                      modalDelegate:nil
+//                     didEndSelector:nil
+//                        contextInfo:nil];
     
 
 }
@@ -91,21 +92,28 @@
     [adb devices];
 }
 
+
+
 - (IBAction)test:(id)sender {
+    [self alert:@"上传中..."];
+    self.loadingView.alphaValue = 1;
+    [self.loadingView setWantsLayer:YES];
+
     
-    CABasicAnimation *rotation = [CABasicAnimation animationWithKeyPath:@"frameRotation" ];
+    CABasicAnimation *rotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z" ];
+
     rotation.fromValue = [NSNumber numberWithFloat:0.0f];
-    rotation.toValue = [NSNumber numberWithFloat:360];
-    rotation.repeatCount = 10;
-    rotation.duration = 1;
-    
-    //[self.loadingView setWantsLayer:YES];
-    //self.loadingView.layer.anchorPoint = CGPointMake(0.5, 0.5);
-    
-    
-    [[self.loadingView animator] setAnimations:@{@"frameRotation":rotation}];
-     [[self.loadingView animator] setFrameRotation:360];
-    //self.loadingView.layer.anchorPoint = CGPointMake(1,1);
+    rotation.toValue = [NSNumber numberWithFloat:-M_PI*2];
+    rotation.repeatCount = 999;
+    rotation.duration = 1.5;
+
+
+    [self.loadingView.layer addAnimation:rotation forKey:@"transform.rotation.z"];
+}
+- (IBAction)stop:(id)sender {
+    [self alert:@"上传成功"];
+    [self.loadingView.layer removeAllAnimations];
+    self.loadingView.alphaValue = 0;
 
 }
 @end

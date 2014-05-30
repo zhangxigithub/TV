@@ -708,9 +708,9 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UxW-GP-pqI">
-                        <rect key="frame" x="165" y="395" width="92" height="32"/>
+                        <rect key="frame" x="165" y="395" width="66" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="测试上传" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vQX-6F-niQ">
+                        <buttonCell key="cell" type="push" title="开始" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vQX-6F-niQ">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" size="13" name="STHeitiSC-Light"/>
                         </buttonCell>
@@ -718,10 +718,10 @@
                             <action selector="test:" target="Voe-Tx-rLC" id="b9b-G3-JOJ"/>
                         </connections>
                     </button>
-                    <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eA-oP-6ok">
-                        <rect key="frame" x="143" y="72" width="184" height="184"/>
+                    <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eA-oP-6ok" userLabel="loading">
+                        <rect key="frame" x="125" y="55" width="220" height="220"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" image="circle" id="a4M-na-3lN"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="circle" id="a4M-na-3lN"/>
                     </imageView>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cbk-yx-Dkz" customClass="DragDropView">
                         <rect key="frame" x="116" y="40" width="238" height="248"/>
@@ -739,6 +739,17 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0BJ-jp-dOn">
+                        <rect key="frame" x="257" y="395" width="53" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="停" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3AT-5j-9QF">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="13" name="STHeitiSC-Light"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="stop:" target="Voe-Tx-rLC" id="XPT-8M-8g2"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
         </window>
