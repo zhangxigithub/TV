@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3330F84519382F890071E149 /* TV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3330F84419382F890071E149 /* TV.m */; };
 		337AAFF3192C98AA004630D7 /* ADB.m in Sources */ = {isa = PBXBuildFile; fileRef = 337AAFF2192C98AA004630D7 /* ADB.m */; };
 		33A50CB4192C3E8100B34646 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A50CB3192C3E8100B34646 /* Cocoa.framework */; };
 		33A50CBE192C3E8200B34646 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33A50CBC192C3E8200B34646 /* InfoPlist.strings */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3330F84319382F890071E149 /* TV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TV.h; sourceTree = "<group>"; };
+		3330F84419382F890071E149 /* TV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TV.m; sourceTree = "<group>"; };
 		337AAFF1192C98AA004630D7 /* ADB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADB.h; sourceTree = "<group>"; };
 		337AAFF2192C98AA004630D7 /* ADB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADB.m; sourceTree = "<group>"; };
 		33A50CB0192C3E8100B34646 /* 电视助手.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "电视助手.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +166,8 @@
 				337AAFF1192C98AA004630D7 /* ADB.h */,
 				337AAFF2192C98AA004630D7 /* ADB.m */,
 				33A50CC8192C3E8200B34646 /* MainMenu.xib */,
+				3330F84319382F890071E149 /* TV.h */,
+				3330F84419382F890071E149 /* TV.m */,
 				33A50CCB192C3E8200B34646 /* Images.xcassets */,
 				33A50CBA192C3E8200B34646 /* Supporting Files */,
 			);
@@ -326,6 +331,7 @@
 				33A50CC7192C3E8200B34646 /* AppDelegate.m in Sources */,
 				33A50CC0192C3E8200B34646 /* main.m in Sources */,
 				33C0E405193379E1001D66D6 /* AsyncUdpSocket.m in Sources */,
+				3330F84519382F890071E149 /* TV.m in Sources */,
 				33C0E408193389E0001D66D6 /* DragDropView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

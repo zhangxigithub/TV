@@ -10,26 +10,27 @@
 #import "GCDAsyncSocket.h"
 #import "ADB.h"
 #import "DragDropView.h"
+#import "TV.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate,GCDAsyncSocketDelegate,ADBDelegate,DragDropViewDelegate>
 {
-    GCDAsyncSocket *asyncSocket;
-    NSMutableArray *availableHosts;
     NSMutableArray *sockets;
-    
     ADB *adb;
-    NSAlert* alert;
+    
+    TV *tv;
 }
 @property (assign) IBOutlet NSWindow *window;
-@property (weak) IBOutlet NSTextField *result;
-@property (weak) IBOutlet DragDropView *fileView;
 
-- (IBAction)scan:(id)sender;
-- (IBAction)list:(id)sender;
+@property (weak) IBOutlet DragDropView *fileView;
+@property (weak) IBOutlet NSTextField *deviceLabel;
+@property (weak) IBOutlet NSTextField *statusLabel;
+@property (weak) IBOutlet NSImageView *loadingView;
+
+
+
 - (IBAction)test:(id)sender;
 - (IBAction)stop:(id)sender;
 
-@property (weak) IBOutlet NSTextField *statusLabel;
-@property (weak) IBOutlet NSImageView *loadingView;
+
 
 @end
