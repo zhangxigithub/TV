@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3330F8941938672F0071E149 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3330F8931938672F0071E149 /* Foundation.framework */; };
+		3330F8961938672F0071E149 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3330F8951938672F0071E149 /* CoreGraphics.framework */; };
+		3330F8981938672F0071E149 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3330F8971938672F0071E149 /* UIKit.framework */; };
+		3330F89E1938672F0071E149 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3330F89C1938672F0071E149 /* InfoPlist.strings */; };
+		3330F8A01938672F0071E149 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3330F89F1938672F0071E149 /* main.m */; };
+		3330F8A41938672F0071E149 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3330F8A31938672F0071E149 /* AppDelegate.m */; };
+		3330F8A71938672F0071E149 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3330F8A51938672F0071E149 /* Main.storyboard */; };
+		3330F8AA1938672F0071E149 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3330F8A91938672F0071E149 /* ViewController.m */; };
+		3330F8AC1938672F0071E149 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3330F8AB1938672F0071E149 /* Images.xcassets */; };
+		3330F8B3193867300071E149 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3330F8B2193867300071E149 /* XCTest.framework */; };
+		3330F8B4193867300071E149 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3330F8931938672F0071E149 /* Foundation.framework */; };
+		3330F8B5193867300071E149 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3330F8971938672F0071E149 /* UIKit.framework */; };
+		3330F8BD193867300071E149 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3330F8BB193867300071E149 /* InfoPlist.strings */; };
+		3330F8BF193867300071E149 /* TV_iPadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3330F8BE193867300071E149 /* TV_iPadTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3330F8B6193867300071E149 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3330F8881938672F0071E149 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3330F88F1938672F0071E149;
+			remoteInfo = "TV-iPad";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3330F8901938672F0071E149 /* TV-iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TV-iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3330F8931938672F0071E149 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3330F8951938672F0071E149 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3330F8971938672F0071E149 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3330F89B1938672F0071E149 /* TV-iPad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TV-iPad-Info.plist"; sourceTree = "<group>"; };
+		3330F89D1938672F0071E149 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3330F89F1938672F0071E149 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3330F8A11938672F0071E149 /* TV-iPad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TV-iPad-Prefix.pch"; sourceTree = "<group>"; };
+		3330F8A21938672F0071E149 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3330F8A31938672F0071E149 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3330F8A61938672F0071E149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3330F8A81938672F0071E149 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3330F8A91938672F0071E149 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3330F8AB1938672F0071E149 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3330F8B1193867300071E149 /* TV-iPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TV-iPadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3330F8B2193867300071E149 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3330F8BA193867300071E149 /* TV-iPadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TV-iPadTests-Info.plist"; sourceTree = "<group>"; };
+		3330F8BC193867300071E149 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3330F8BE193867300071E149 /* TV_iPadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TV_iPadTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3330F88D1938672F0071E149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3330F8961938672F0071E149 /* CoreGraphics.framework in Frameworks */,
+				3330F8981938672F0071E149 /* UIKit.framework in Frameworks */,
+				3330F8941938672F0071E149 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3330F8AE193867300071E149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3330F8B3193867300071E149 /* XCTest.framework in Frameworks */,
+				3330F8B5193867300071E149 /* UIKit.framework in Frameworks */,
+				3330F8B4193867300071E149 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3330F8871938672F0071E149 = {
+			isa = PBXGroup;
+			children = (
+				3330F8991938672F0071E149 /* TV-iPad */,
+				3330F8B8193867300071E149 /* TV-iPadTests */,
+				3330F8921938672F0071E149 /* Frameworks */,
+				3330F8911938672F0071E149 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3330F8911938672F0071E149 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3330F8901938672F0071E149 /* TV-iPad.app */,
+				3330F8B1193867300071E149 /* TV-iPadTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3330F8921938672F0071E149 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3330F8931938672F0071E149 /* Foundation.framework */,
+				3330F8951938672F0071E149 /* CoreGraphics.framework */,
+				3330F8971938672F0071E149 /* UIKit.framework */,
+				3330F8B2193867300071E149 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3330F8991938672F0071E149 /* TV-iPad */ = {
+			isa = PBXGroup;
+			children = (
+				3330F8A21938672F0071E149 /* AppDelegate.h */,
+				3330F8A31938672F0071E149 /* AppDelegate.m */,
+				3330F8A51938672F0071E149 /* Main.storyboard */,
+				3330F8A81938672F0071E149 /* ViewController.h */,
+				3330F8A91938672F0071E149 /* ViewController.m */,
+				3330F8AB1938672F0071E149 /* Images.xcassets */,
+				3330F89A1938672F0071E149 /* Supporting Files */,
+			);
+			path = "TV-iPad";
+			sourceTree = "<group>";
+		};
+		3330F89A1938672F0071E149 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3330F89B1938672F0071E149 /* TV-iPad-Info.plist */,
+				3330F89C1938672F0071E149 /* InfoPlist.strings */,
+				3330F89F1938672F0071E149 /* main.m */,
+				3330F8A11938672F0071E149 /* TV-iPad-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3330F8B8193867300071E149 /* TV-iPadTests */ = {
+			isa = PBXGroup;
+			children = (
+				3330F8BE193867300071E149 /* TV_iPadTests.m */,
+				3330F8B9193867300071E149 /* Supporting Files */,
+			);
+			path = "TV-iPadTests";
+			sourceTree = "<group>";
+		};
+		3330F8B9193867300071E149 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3330F8BA193867300071E149 /* TV-iPadTests-Info.plist */,
+				3330F8BB193867300071E149 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3330F88F1938672F0071E149 /* TV-iPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3330F8C2193867300071E149 /* Build configuration list for PBXNativeTarget "TV-iPad" */;
+			buildPhases = (
+				3330F88C1938672F0071E149 /* Sources */,
+				3330F88D1938672F0071E149 /* Frameworks */,
+				3330F88E1938672F0071E149 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TV-iPad";
+			productName = "TV-iPad";
+			productReference = 3330F8901938672F0071E149 /* TV-iPad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3330F8B0193867300071E149 /* TV-iPadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3330F8C5193867300071E149 /* Build configuration list for PBXNativeTarget "TV-iPadTests" */;
+			buildPhases = (
+				3330F8AD193867300071E149 /* Sources */,
+				3330F8AE193867300071E149 /* Frameworks */,
+				3330F8AF193867300071E149 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3330F8B7193867300071E149 /* PBXTargetDependency */,
+			);
+			name = "TV-iPadTests";
+			productName = "TV-iPadTests";
+			productReference = 3330F8B1193867300071E149 /* TV-iPadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3330F8881938672F0071E149 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = zhangxi;
+				TargetAttributes = {
+					3330F8B0193867300071E149 = {
+						TestTargetID = 3330F88F1938672F0071E149;
+					};
+				};
+			};
+			buildConfigurationList = 3330F88B1938672F0071E149 /* Build configuration list for PBXProject "TV-iPad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3330F8871938672F0071E149;
+			productRefGroup = 3330F8911938672F0071E149 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3330F88F1938672F0071E149 /* TV-iPad */,
+				3330F8B0193867300071E149 /* TV-iPadTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3330F88E1938672F0071E149 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3330F8AC1938672F0071E149 /* Images.xcassets in Resources */,
+				3330F89E1938672F0071E149 /* InfoPlist.strings in Resources */,
+				3330F8A71938672F0071E149 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3330F8AF193867300071E149 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3330F8BD193867300071E149 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3330F88C1938672F0071E149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3330F8AA1938672F0071E149 /* ViewController.m in Sources */,
+				3330F8A41938672F0071E149 /* AppDelegate.m in Sources */,
+				3330F8A01938672F0071E149 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3330F8AD193867300071E149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3330F8BF193867300071E149 /* TV_iPadTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3330F8B7193867300071E149 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3330F88F1938672F0071E149 /* TV-iPad */;
+			targetProxy = 3330F8B6193867300071E149 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3330F89C1938672F0071E149 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3330F89D1938672F0071E149 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3330F8A51938672F0071E149 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3330F8A61938672F0071E149 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3330F8BB193867300071E149 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3330F8BC193867300071E149 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3330F8C0193867300071E149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		3330F8C1193867300071E149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3330F8C3193867300071E149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TV-iPad/TV-iPad-Prefix.pch";
+				INFOPLIST_FILE = "TV-iPad/TV-iPad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3330F8C4193867300071E149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TV-iPad/TV-iPad-Prefix.pch";
+				INFOPLIST_FILE = "TV-iPad/TV-iPad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3330F8C6193867300071E149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TV-iPad.app/TV-iPad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TV-iPad/TV-iPad-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TV-iPadTests/TV-iPadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3330F8C7193867300071E149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TV-iPad.app/TV-iPad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TV-iPad/TV-iPad-Prefix.pch";
+				INFOPLIST_FILE = "TV-iPadTests/TV-iPadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3330F88B1938672F0071E149 /* Build configuration list for PBXProject "TV-iPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3330F8C0193867300071E149 /* Debug */,
+				3330F8C1193867300071E149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3330F8C2193867300071E149 /* Build configuration list for PBXNativeTarget "TV-iPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3330F8C3193867300071E149 /* Debug */,
+				3330F8C4193867300071E149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3330F8C5193867300071E149 /* Build configuration list for PBXNativeTarget "TV-iPadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3330F8C6193867300071E149 /* Debug */,
+				3330F8C7193867300071E149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3330F8881938672F0071E149 /* Project object */;
+}

@@ -16,6 +16,8 @@
 -(IBAction)showHelp:(id)sender
 {
     [self alert:@"help"];
+    
+    
 }
 -(BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
 {
